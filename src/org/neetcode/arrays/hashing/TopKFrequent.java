@@ -1,9 +1,6 @@
 package org.neetcode.arrays.hashing;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TopKFrequent {
 
@@ -27,6 +24,13 @@ public class TopKFrequent {
         return res;
     }
     public static void main(String[] args) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(3, Comparator.reverseOrder());
+        pq.add(5);
+        pq.add(6);
+        System.out.println(pq.size());
+        pq.add(2);
+        pq.add(7);
+        Object[] arr = pq.toArray();
         int[] list = {1,1,1,3,2,2};
         int[] res = topKFrequent(list,2);
         System.out.println(res[0]+" "+res[1]);
