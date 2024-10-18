@@ -1,6 +1,4 @@
-package org.neetcode;
-
-import com.sun.source.tree.Tree;
+package org.neetcode.trees;
 
 import java.util.*;
 import java.util.stream.Collectors;

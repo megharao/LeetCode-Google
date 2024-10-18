@@ -1,7 +1,7 @@
 package org.neetcode.linkedlist;
 
 import java.util.ArrayDeque;
-import java.util.List;
+import java.util.Objects;
 import java.util.Queue;
 
 public class MergeSortedLinkedList {
@@ -84,5 +84,18 @@ class ListNode {
         }
 //        str += temp.val;
         return str;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ListNode listNode = (ListNode) o;
+        return val == listNode.val && Objects.equals(next, listNode.next);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, next);
     }
 }
